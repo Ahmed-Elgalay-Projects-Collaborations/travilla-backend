@@ -10,6 +10,7 @@ router.post('/register', UserController.register);
 
 // Protected routes
 router.get('/profile', authenticate, UserController.getProfile);
+router.get('/logout', authenticate, UserController.logout); // Logout route
 
 // Admin-only routes
 router.get('/admin', authenticate, authorize(['admin']), UserController.adminDashboard);
