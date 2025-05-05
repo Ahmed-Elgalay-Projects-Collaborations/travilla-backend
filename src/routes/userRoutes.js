@@ -6,6 +6,7 @@ const router = express.Router();
 
 // Public routes
 router.post('/login', UserController.login);
+router.post('/register', UserController.register);
 
 // Protected routes
 router.get('/profile', authenticate, UserController.getProfile);
